@@ -1,0 +1,27 @@
+{
+  "name": "@setyadi/impression",
+  "version": "0.1.0",
+  "description": "Dead simple impression event.",
+  "main": "dist/impression.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/styd/impression.git"
+  },
+  "keywords": [
+    "impression",
+    "custom-event"
+  ],
+  "author": "Adrian Setyadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/styd/impression/issues"
+  },
+  "homepage": "https://github.com/styd/impression#readme",
+  "devDependencies": {
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
