@@ -1,6 +1,9 @@
 (window => {
   const {
     document,
+    IntersectionObserver,
+    IntersectionObserverEntry,
+    Event,
   } = window;
 
   const elementsSelector = document.currentScript.getAttribute('elements-selector') || '.impression';
@@ -8,8 +11,7 @@
   const visibleFractioff = document.currentScript.getAttribute('visible-fractioff') || 0.0;
 
   const ableToObserveIntersection =
-    'IntersectionObserver' in window &&
-    'IntersectionObserverEntry' in window &&
+    IntersectionObserver && IntersectionObserverEntry &&
     'intersectionRatio' in IntersectionObserverEntry.prototype;
 
   if (ableToObserveIntersection) {

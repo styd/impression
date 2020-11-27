@@ -1,10 +1,15 @@
 (window => {
+  const {
+    document,
+    IntersectionObserver,
+    IntersectionObserverEntry,
+    Event,
+  } = window;
+
   const elementsSelector = document.currentScript.getAttribute('elements-selector') || '.impression';
   const visibleFraction = document.currentScript.getAttribute('visible-fraction') || 0.5;
 
-  const ableToObserveIntersection =
-    'IntersectionObserver' in window &&
-    'IntersectionObserverEntry' in window
+  const ableToObserveIntersection = IntersectionObserver && IntersectionObserverEntry
 
   if (ableToObserveIntersection) {
     const intersectionConfig = {
