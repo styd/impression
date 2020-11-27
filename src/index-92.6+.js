@@ -7,19 +7,13 @@
     'IntersectionObserverEntry' in window
 
   if (ableToObserveIntersection) {
-    if ('isVisible' in IntersectionObserverEntry.prototype) {
-      IntersectionObserverEntry.prototype.isVisible = true;
-    }
-
     const intersectionConfig = {
       threshold: visibleFraction,
-      trackVisibility: true,
-      delay: 100
     };
 
     const intersectionCallback = (entries, self) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.isVisible) {
+        if (entry.isIntersecting) {
           const impression = new Event('impression');
           entry.target.dispatchEvent(impression);
           self.unobserve(entry.target);
