@@ -5,18 +5,18 @@ var defaultConfig = {
 }
 
 var _92p6Config = Object.assign({}, defaultConfig, {
-  entry: './src/index-92.6+.js',
+  entry: './src/92.6%+/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'impression-92.6+.js',
+    filename: '92.6/impression.js',
   }
 })
 
 var _92p6WithOffConfig = Object.assign({}, defaultConfig, {
-  entry: './src/index+off-92.6+.js',
+  entry: './src/92.6%+/index+off.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'impression+off-92.6+.js',
+    filename: '92.6/impression+off.js',
   }
 })
 
