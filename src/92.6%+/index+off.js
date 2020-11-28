@@ -3,12 +3,12 @@
     document,
     IntersectionObserver,
     IntersectionObserverEntry,
-    Event,
   } = window;
 
-  const elementsSelector = document.currentScript.getAttribute('elements-selector') || '.impression';
-  const visibleFraction = document.currentScript.getAttribute('visible-fraction') || 0.5;
-  const visibleFractioff = document.currentScript.getAttribute('visible-fractioff') || 0.0;
+  const currentScript = document.currentScript;
+  const elementsSelector = currentScript.getAttribute('elements-selector') || '.impression';
+  const visibleFraction = currentScript.getAttribute('visible-fraction') || 0.5;
+  const visibleFractioff = currentScript.getAttribute('visible-fractioff') || 0.0;
 
   const ableToObserveIntersection =
     IntersectionObserver && IntersectionObserverEntry &&
@@ -53,7 +53,6 @@
     }
 
     const impressionObserver = new IntersectionObserver(intersectionCallback, intersectionConfig);
-
     const elements = document.querySelectorAll(elementsSelector);
 
     elements.forEach(element => {

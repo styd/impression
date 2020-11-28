@@ -3,13 +3,14 @@
     document,
     IntersectionObserver,
     IntersectionObserverEntry,
-    Event,
   } = window;
 
-  const elementsSelector = document.currentScript.getAttribute('elements-selector') || '.impression';
-  const visibleFraction = document.currentScript.getAttribute('visible-fraction') || 0.5;
+  const currentScript = document.currentScript;
+  const elementsSelector = currentScript.getAttribute('elements-selector') || '.impression';
+  const visibleFraction = currentScript.getAttribute('visible-fraction') || 0.5;
 
-  const ableToObserveIntersection = IntersectionObserver && IntersectionObserverEntry
+  const ableToObserveIntersection =
+    IntersectionObserver && IntersectionObserverEntry;
 
   if (ableToObserveIntersection) {
     const intersectionConfig = {
@@ -17,17 +18,20 @@
     };
 
     const intersectionCallback = (entries, self) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const impression = new Event('impression');
-          entry.target.dispatchEvent(impression);
-          self.unobserve(entry.target);
+      entries.forEach(({isIntersecting, target}) => {
+        if (isIntersecting) {
+          fireImpression(target);
+          self.unobserve(target);
         }
       });
     };
 
-    const impressionObserver = new IntersectionObserver(intersectionCallback, intersectionConfig);
+    const fireImpression = (element) => {
+      const impression = new Event('impression');
+      element.dispatchEvent(impression);
+    }
 
+    const impressionObserver = new IntersectionObserver(intersectionCallback, intersectionConfig);
     const elements = document.querySelectorAll(elementsSelector);
 
     elements.forEach(element => {
