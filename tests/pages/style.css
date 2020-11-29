@@ -1,0 +1,38 @@
+body {
+  background-color: #f4fcfe;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+p.big {
+  margin: 0;
+  font-size: 275px;
+  line-height: 1;
+  color: rgba(0,0,0,0.75);
+}
+
+.card {
+  position: relative;
+  margin: 15vh auto 40vh auto;
+  padding: 10px 20px;
+  min-width: 100px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.immediately-appear, .immediately-appear--impression {
+  width: 612px;
+}
+
+.middle, .middle-non-impression {
+  width: 688px;
+}
+
+.last, .last--impression {
+  width: 551px;
+}

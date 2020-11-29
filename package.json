@@ -1,10 +1,15 @@
 {
   "name": "@setyadi/impression",
   "version": "0.1.0",
-  "description": "Dead simple impression event.",
-  "main": "dist/impression.js",
+  "description": "Easy to use impression event.",
+  "author": {
+    "name": "Adrian Setyadi",
+    "email": "a.styd@yahoo.com"
+  },
+  "main": "dist/92+/impression+off.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -12,15 +17,18 @@
   },
   "keywords": [
     "impression",
-    "custom-event"
+    "custom-event",
+    "event"
   ],
-  "author": "Adrian Setyadi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/styd/impression/issues"
   },
   "homepage": "https://github.com/styd/impression#readme",
   "devDependencies": {
+    "jest": "^26.6.3",
+    "mkdirp": "^1.0.4",
+    "puppeteer": "^5.5.0",
     "webpack": "^5.6.0",
     "webpack-cli": "^4.2.0"
   }

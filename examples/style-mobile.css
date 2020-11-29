@@ -1,0 +1,76 @@
+body {
+  background-image: url(images/dave-hoefler-opdU5V-jkbQ-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+p.big {
+  margin: 0;
+  font-size: 85px;
+  line-height: 1;
+  color: rgba(0,0,0,0.75);
+}
+
+.card {
+  position: relative;
+  margin: 15vh auto 40vh auto;
+  padding: 10px 20px;
+  min-width: 100px;
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.immediately-appear--impression {
+  width: 190px;
+}
+
+.middle-non-impression {
+  width: 247px;
+}
+
+.last--impression {
+  width: 227px;
+}
+
+#toast-container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast {
+  margin: 10px auto;
+  padding: 10px 20px;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  animation: 0.5s ease-out 0s 1 slideUp;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
