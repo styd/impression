@@ -6,7 +6,7 @@
     "name": "Adrian Setyadi",
     "email": "a.styd@yahoo.com"
   },
-  "main": "dist/92+/impression+off.js",
+  "main": "dist/92+/impression+off.min.js",
   "scripts": {
     "build": "webpack",
     "test": "jest"
