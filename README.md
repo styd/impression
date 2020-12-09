@@ -13,13 +13,13 @@ To fire `impression` event one time when an element becomes visible, use one of 
 ### jsDelivr
 
 ```html
-<script defer src='https://cdn.jsdelivr.net/npm/@setyadi/impression@0.1.0/dist/92+/impression.min.js'></script>
+<script defer src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression.min.js'></script>
 ```
 
 ### unpkg
 
 ```html
-<script defer src='https://unpkg.com/@setyadi/impression@0.1.0/dist/92+/impression.min.js'></script>
+<script defer src='https://unpkg.com/@setyadi/impression/dist/92+/impression.min.js'></script>
 ```
 
 ## One Time Impression + Off (0.7KB)
@@ -30,20 +30,20 @@ when an element is no longer visible, use one of the following CDNs.
 ### jsDelivr
 
 ```html
-<script defer src='https://cdn.jsdelivr.net/npm/@setyadi/impression@0.1.0/dist/92+/impression+off.min.js'></script>
+<script defer src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression+off.min.js'></script>
 ```
 
 ### unpkg
 
 ```html
-<script defer src='https://unpkg.com/@setyadi/impression@0.1.0/dist/92+/impression+off.min.js'></script>
+<script defer src='https://unpkg.com/@setyadi/impression/dist/92+/impression+off.min.js'></script>
 ```
 
 
 # Disclaimer
 
-Based on caniuse.com, the above scripts should work for 92.x% of users worldwide or more. But when
-it's not working it doesn't break the page.
+Based on [CanIUse](https://www.caniuse.com), the above scripts should work for 92.x% or more of users
+worldwide. But when it's not working it doesn't break the page.
 
 
 # Roadmap
@@ -56,7 +56,7 @@ it's not working it doesn't break the page.
 # Configuration
 
 By default, the script would just work provided that you agree with the default values. But if you
-want to use something different, you can override the values by adding the following attributes on
+want to use something different, you can override the defaults by adding the following attributes on
 the script tag.
 
 | Attributes         | Description                                                                                            | Default Value |
@@ -69,8 +69,8 @@ the script tag.
 
 ```html
 <script defer
-  src='https://cdn.jsdelivr.net/npm/@setyadi/impression@0.1.0/dist/92+/impression+off.min.js'
-  elements-selector='[name="track-impression"]'
+  src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression+off.min.js'
+  elements-selector='[data-track="MyImpression"]'
   visible-fraction=0.8
   visible-fractioff=0.1>
 </script>
