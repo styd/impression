@@ -77,5 +77,10 @@ the script tag.
 ```
 
 
+# Demo
+
+To run the demo, clone this repo, `cd` to it, `yarn install` and then `yarn vanilla:demo`.
+
+
 # [License](LICENSE)
 
