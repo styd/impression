@@ -1,3 +1,5 @@
+![build-test](https://github.com/styd/impression/workflows/build-test/badge.svg)
+
 > Impression is a gallery of easy to use scripts to have HTML element 'impression' event on your
 > web pages.
 
