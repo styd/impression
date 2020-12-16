@@ -53,10 +53,20 @@
     }
 
     const impressionObserver = new IntersectionObserver(intersectionCallback, intersectionConfig);
-    const elements = document.querySelectorAll(elementsSelector);
 
-    elements.forEach(element => {
-      impressionObserver.observe(element);
-    });
+    const initImpression = ()=>{
+      const elements = document.querySelectorAll(elementsSelector);
+      elements.forEach(element => {
+        impressionObserver.observe(element);
+      });
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener("load", initImpression, true);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", initImpression);
+    } else {
+      initImpression();
+    }
   }
 })(window)
