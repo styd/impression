@@ -10,8 +10,7 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "demo": "http-server -c-1 -a localhost -p 2345 -o",
-    "vanilla:demo": "yarn demo examples/vanilla/demo.html"
+    "demo": "http-server -c-1 -a localhost -p 2345 -o examples/vanilla/demo.html"
   },
   "repository": {
     "type": "git",
