@@ -8,11 +8,13 @@
 Pick one that you need, add CSS class 'impression' (overridable default) to elements you want to
 track, and then add listeners for the event just as you use `click` event or any other events.
 
-### One Time Impression (92+/impression.min.js -> 0.4KB)
+## One Time Impression
+### (92+/impression.min.js -> 0.5KB)
 
 To fire `impression` event one time when an element becomes visible, use one of the following CDNs.
 
-### One Time Impression + Off (92+/impression+off.min.js -> 0.7KB)
+## One Time Impression + Off
+### (92+/impression+off.min.js -> 0.8KB)
 
 To fire `impression` event one time when an element becomes visible and `impressioff` event one time
 when an element is no longer visible, use one of the following CDNs.
@@ -23,11 +25,11 @@ when an element is no longer visible, use one of the following CDNs.
   <summary><b>jsDelivr</b></summary>
 
 ```html
-<script defer src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression.min.js'></script>
 ```
 
 ```html
-<script defer src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression+off.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression+off.min.js'></script>
 ```
 
 </details>
@@ -37,11 +39,11 @@ when an element is no longer visible, use one of the following CDNs.
 
 
 ```html
-<script defer src='https://unpkg.com/@setyadi/impression/dist/92+/impression.min.js'></script>
+<script src='https://unpkg.com/@setyadi/impression/dist/92+/impression.min.js'></script>
 ```
 
 ```html
-<script defer src='https://unpkg.com/@setyadi/impression/dist/92+/impression+off.min.js'></script>
+<script src='https://unpkg.com/@setyadi/impression/dist/92+/impression+off.min.js'></script>
 ```
 
 </details>
@@ -62,7 +64,7 @@ the script tag.
 ## Example of Overriding Defaults
 
 ```html
-<script defer
+<script
   src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression+off.min.js'
   elements-selector='[data-track="MyImpression"]'
   visible-fraction=0.8
