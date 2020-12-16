@@ -15,13 +15,9 @@ salesCounter.addEventListener('impressioff', function() {
 var percentCounter = document.querySelector('.last, .last--impression');
 percentCounter.addEventListener('impression', function() {
   let percentNumEl = percentCounter.querySelector('p.big span.number');
-  setTimeout(function() {
-    percentNumEl.innerText = 64;
-  }, 50);
+  percentNumEl.innerText = 64;
 });
 percentCounter.addEventListener('impressioff', function() {
   let percentNumEl = percentCounter.querySelector('p.big span.number');
-  setTimeout(function() {
-    percentNumEl.innerText = 32;
-  }, 50);
+  percentNumEl.innerText = 32;
 });

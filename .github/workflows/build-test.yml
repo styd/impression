@@ -23,5 +23,5 @@ jobs:
     - name: Create build
       run: yarn build
     - name: Run tests
-      run: npm test
+      run: yarn test
 

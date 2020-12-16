@@ -46,13 +46,13 @@ describe('one time impression', () => {
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('$412');
-      await page.waitForTimeout(70);
+      await page.waitForTimeout(20);
 
       page.evaluate(() => {
         let counter = document.querySelector('.last');
         counter.scrollIntoViewIfNeeded(true);
       });
-      await page.waitForTimeout(70);
+      await page.waitForTimeout(20);
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('64%');
@@ -89,13 +89,13 @@ describe('one time impression', () => {
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('$412');
-      await page.waitForTimeout(70);
+      await page.waitForTimeout(20);
 
       page.evaluate(() => {
         let counter = document.querySelector('.last--impression');
         counter.scrollIntoViewIfNeeded(true);
       });
-      await page.waitForTimeout(70);
+      await page.waitForTimeout(20);
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('64%');
@@ -129,16 +129,16 @@ describe('one time impression', () => {
         let counter = document.querySelector('.immediately-appear');
         counter.scrollIntoViewIfNeeded(true);
       });
+      await page.waitForTimeout(20);
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('$212');
-      await page.waitForTimeout(70);
 
       page.evaluate(() => {
         let counter = document.querySelector('.last');
         counter.scrollIntoViewIfNeeded(true);
       });
-      await page.waitForTimeout(70);
+      await page.waitForTimeout(20);
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('32%');
@@ -172,16 +172,16 @@ describe('one time impression', () => {
         let counter = document.querySelector('.immediately-appear--impression');
         counter.scrollIntoViewIfNeeded(true);
       });
+      await page.waitForTimeout(20);
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('$212');
-      await page.waitForTimeout(70);
 
       page.evaluate(() => {
         let counter = document.querySelector('.last--impression');
         counter.scrollIntoViewIfNeeded(true);
       });
-      await page.waitForTimeout(70);
+      await page.waitForTimeout(20);
 
       text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('32%');
