@@ -22,7 +22,7 @@ when an element is no longer visible, use one of the following CDNs.
 ## CDNs
 
 <details>
-  <summary><b>jsDelivr</b></summary>
+  <summary><strong>jsDelivr</strong></summary>
 
 ```html
 <script src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression.min.js'></script>
@@ -35,7 +35,7 @@ when an element is no longer visible, use one of the following CDNs.
 </details>
 
 <details>
-  <summary><b>unpkg</b></summary>
+  <summary><strong>unpkg</strong></summary>
 
 
 ```html
@@ -75,7 +75,23 @@ the script tag.
 
 # Demo
 
-To run the demo, clone this repo, `cd` to it, `yarn install` and then `yarn demo`.
+To run the demo, clone this repo, `cd` to it, `yarn install` and then pick the demo page you want to
+see.
+
+### Vanilla JS
+
+```
+yarn demo
+```
+
+### Svelte
+
+```
+yarn demo:svelte
+```
+
+They basically demo the same thing, but you can look at the source code to see how they use
+`impression`.
 
 
 # Disclaimer

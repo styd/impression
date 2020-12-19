@@ -1,0 +1,41 @@
+<script>
+  import { store, nextStoreId } from './store.js';
+  import Card from './Card.svelte';
+  import Counter from './Counter.svelte';
+
+  let title = 'Sales Counter'
+  let counter;
+
+  function toast(message) {
+    let nextItemPosition = $store.length;
+    let id = ++$nextStoreId;
+    $store[nextItemPosition] = { id, message }
+    setTimeout(() => {
+      $store = $store.filter((value, index) => {
+        if (value.id != id) return value;
+      });
+    }, (2000 + message.length * 30));
+  }
+
+  function handleImpression() {
+    counter.startCounting();
+    toast(`<h3>impression</h3> from <b>${title}</b>`);
+  }
+
+  function handleImpressioff() {
+    toast(`<h3>impressioff</h3> from <b>${title}</b>`);
+  }
+</script>
+
+<Card on:impression={handleImpression}
+      on:impressioff={handleImpressioff}
+      class='immediately-appear--impression'
+      title={title}
+      subtitle='(start on impression)'
+      description='worth of sales per minute'>
+  <Counter bind:this={counter}
+           pre='$'
+           number={10}
+           target={412}
+           duration={5000} />
+</Card>
