@@ -10,7 +10,8 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "demo": "cp -r dist/92+/ examples/vanilla/ && cd examples/vanilla/ && http-server -c-1 -a localhost -p 2345 -o demo.html && cd -"
+    "demo": "cp -r dist/92+/ examples/vanilla/ && cd examples/vanilla/ && http-server -c-1 -a localhost -p 2345 -o demo.html && cd -",
+    "demo:svelte": "cp -r dist/92+/ examples/svelte/public/ && cd examples/svelte/ && yarn install && yarn build && yarn concurrently 'yarn start' 'yarn opener http://localhost:3456' && cd -"
   },
   "repository": {
     "type": "git",
