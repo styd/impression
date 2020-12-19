@@ -10,7 +10,7 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "demo": "http-server -c-1 -a localhost -p 2345 -o examples/vanilla/demo.html"
+    "demo": "cp -r dist/92+/ examples/vanilla/ && cd examples/vanilla/ && http-server -c-1 -a localhost -p 2345 -o demo.html && cd -"
   },
   "repository": {
     "type": "git",

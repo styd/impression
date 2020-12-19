@@ -1,11 +1,12 @@
 const increment = (element, target, duration) => {
+  let minimumIntervalDuration = 50;
   let counter = element.querySelector('p.big span.number');
   let number = +counter.innerText;
   let intervalDuration = duration/(target-number)
   let incrementStep;
-  if (intervalDuration <= 30) {
-    intervalDuration = 30;
-    incrementStep = (target-number)*30/duration;
+  if (intervalDuration <= minimumIntervalDuration) {
+    intervalDuration = minimumIntervalDuration;
+    incrementStep = (target-number)*minimumIntervalDuration/duration;
   } else {
     incrementStep = 1;
   }

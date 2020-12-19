@@ -1,7 +1,7 @@
 var customImpressionElements = document.querySelectorAll('[class$="--impression"]');
 
 customImpressionElements.forEach(function(element) {
-  let elementName = element.firstElementChild.innerText;
+  let elementName = element.firstElementChild.firstElementChild.innerText;
   element.addEventListener('impression', function() {
     toast(`<h3>impression</h3> from <b>${elementName}</b>`);
   });
