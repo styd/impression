@@ -79,13 +79,9 @@ p.big {
   }
 }
 
-.fork-me {
+img[usemap="#fork-me"] {
   position: absolute;
-  display: block;
   top: 0;
   right: 0;
-}
-
-.fork-me img {
   width: 120px;
 }
