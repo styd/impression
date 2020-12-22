@@ -5,6 +5,7 @@
   import ProbabilityCard from './ProbabilityCard.svelte';
   import ToastContainer from './ToastContainer.svelte';
   import ToastItem from './ToastItem.svelte';
+  import ForkMe from './ForkMe.svelte';
 
   $store = [];
   nextStoreId.set(0);
@@ -26,6 +27,8 @@
     <ToastItem {toast} />
   {/each}
 </ToastContainer>
+
+<ForkMe />
 
 <style>
   :global(body) {
