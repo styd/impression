@@ -2,3 +2,4 @@
 .gitattributes
 yarn-error.log
 examples/
+tests/
