@@ -11,7 +11,7 @@
 
 <style>
   img {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 120px;
