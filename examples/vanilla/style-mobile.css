@@ -58,6 +58,7 @@ p.big {
 .toast {
   margin: 10px auto;
   padding: 10px 20px;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
   font-family: Helvetica, sans-serif;

@@ -12,6 +12,7 @@
   .toast {
     margin: 10px 20px;
     padding: 20px 40px;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 16px;
     font-family: Helvetica, sans-serif;

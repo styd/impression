@@ -1,4 +1,4 @@
-var customImpressionElements = document.querySelectorAll('[class$="--impression"]');
+var customImpressionElements = document.querySelectorAll('[class*="--impression"]');
 
 customImpressionElements.forEach(function(element) {
   let elementName = element.firstElementChild.firstElementChild.innerText;
@@ -15,10 +15,10 @@ salesCounter.addEventListener('impression', function() {
   increment(salesCounter, 412, 5000);
 });
 
-var millionCounter = document.querySelector('.middle-non-impression');
-increment(millionCounter, 789, 20000);
+var eventsCounter = document.querySelector('.middle-non-impression');
+increment(eventsCounter, 789, 20000);
 
-var percentCounter = document.querySelector('.last--impression');
-percentCounter.addEventListener('impression', function() {
-  increment(percentCounter, 64, 2000);
+var probabilityCounter = document.querySelector('.last--impression');
+probabilityCounter.addEventListener('impression', function() {
+  increment(probabilityCounter, 64, 2000);
 });
