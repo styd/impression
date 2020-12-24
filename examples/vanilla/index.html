@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Impression</title>
+    <script src='increment.js'></script>
+    <script src='toast.js'></script>
+    <script src='flicker.js'></script>
+    <script defer src='listeners.js'></script>
+    <script async
+            elements-selector='[class$="--impression"]'
+            src='https://cdn.jsdelivr.net/npm/@setyadi/impression/dist/92+/impression+off.min.js'>
+    </script>
+    <link rel='icon' type='image/png' href='/favicon.png'>
+    <link rel="stylesheet" media="screen and (max-device-width: 767px)" href="style-mobile.css">
+    <link rel="stylesheet" media="screen and (min-device-width: 768px)" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Hairline">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Outline">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  </head>
+
+  <body>
+    <div class='demo'>
+      <div class='project--impression'>
+        <h1>
+          <span class='hairline'>Impressi</span><span class='outline'>on</span>
+        </h1>
+        <hr />
+        <h3>HTML DOM element 'impression' event on your web pages.</h3>
+      </div>
+
+      <div class='scroll-down'>
+        Scroll <br />
+        Down <br />
+        <span class='arrow'>
+          |<br />
+          \/
+        </span>
+      </div>
+
+      <div class='card immediately-appear--impression'>
+        <p><span class='title'>Sales Counter</span> (start on impression)</p>
+        <p class='big'>
+          <span class='dollar-symbol'>$</span><span class='number'>10</span>
+        </p>
+        <p><span class='description'>worth of sales per minute</span></p>
+      </div>
+
+      <div class='card middle-non-impression'>
+        <p><span class='title'>Events Counter</span> (start on page load)</p>
+        <p class='big'>
+          <span class='number'>0</span><span class='million-symbol'>M</span>
+        </p>
+        <p><span class='description'>events sent per day</span></p>
+      </div>
+
+      <div class='card last--impression'>
+        <p><span class='title'>Probability Counter</span> (start on impression)</p>
+        <p class='big'>
+          <span class='number'>4</span><span class='percent-symbol'>%</span>
+        </p>
+        <p><span class='description'>probability that you're a bearded guy</span></p>
+      </div>
+    </div>
+
+    <div class='bottom-drawer'>
+      <div class='drawer-content'>
+        <p class='notes'>
+          Notes:
+        </p>
+        <ol>
+          <li>
+            Events Counter is there just to show you how bad counters can look
+            if you start them on page load.
+          </li>
+          <li>
+            Toast messages or popups at the bottom is not part of the features
+            of this library.
+          </li>
+        </ol>
+
+        <div class='section'>
+          <h1>What is this?</h1>
+          <p>
+            A JavaScript library to trigger 'impression' event whenever HTML DOM 
+            elements of your choice come into browser viewport.
+          </p>
+        </div>
+
+        <div class='section'>
+          <h1>When will I need it?</h1>
+          <p>
+            When you need to do something whenever an element is in viewport, something
+            like:
+          </p>
+          <ul>
+            <li>
+              turning on and off video or audio players based on whether user see them
+              or not,
+            </li>
+            <li>
+              running animations once user look at them (such as simple counters above),
+            </li>
+            <li>
+              impression event tracking of specific HTML elements for your web analytics
+              to find out the true CTR (Click-Through Rate),
+            </li>
+            <li>
+              etc.
+            </li>
+          </ul>
+        </div>
+
+        <div class='section'>
+          <h1>Where can I use it?</h1>
+          <p>
+            You can use it with whatever framework you use for your app and whatever
+            bundler you use to bundle your app because it's just plain vanilla JavaScript
+            inside. Check out
+            <a href='https://github.com/styd/impression/tree/main/examples'>
+              this page's source code and other examples</a>
+            to see how it's used in some frameworks.
+          </p>
+        </div>
+
+        <br><br><br>
+
+        <div class='project--impression'>
+          <h1>
+            <span class='hairline'>Impressi</span><span class='outline'>on</span>
+          </h1>
+          <hr />
+          <h3>HTML DOM element 'impression' event on your web pages.</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Map Generated by http://www.image-map.net/ -->
+    <img src="https://raw.githubusercontent.com/styd/impression/main/images/fork-me.png"
+         usemap="#fork-me">
+    <map name="fork-me">
+      <area shape="poly"
+            alt="Fork me on GitHub"
+            title="Fork me on GitHub"
+            coords="0,0,60,0,180,120,180,180"
+            href="https://github.com/styd/impression">
+    </map>
+  </body>
+</html>

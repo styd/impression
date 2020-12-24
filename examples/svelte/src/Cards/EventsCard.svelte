@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
-  import Card from './Card.svelte';
-  import Counter from './Counter.svelte';
+  import Card from '../Card.svelte';
+  import Counter from '../Counter.svelte';
 
   let counter;
 

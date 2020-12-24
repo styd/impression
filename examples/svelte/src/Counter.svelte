@@ -35,14 +35,14 @@
 <style>
   p.big {
     margin: 0;
-    font-size: 85px;
+    font-size: 80px;
     line-height: 1;
     color: rgba(0,0,0,0.75);
   }
 
   @media screen and (min-width: 768px) {
     p.big {
-      font-size: 275px;
+      font-size: 180px;
     }
   }
 </style>

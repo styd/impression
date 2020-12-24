@@ -1,9 +1,11 @@
 <script>
-  import { store, nextStoreId } from './store.js';
-  import Card from './Card.svelte';
-  import Counter from './Counter.svelte';
+  import { createEventDispatcher } from 'svelte';
+  import { store, nextStoreId } from '../store.js';
+  import Card from '../Card.svelte';
+  import Counter from '../Counter.svelte';
 
-  let title = 'Sales Counter'
+  const dispatch = createEventDispatcher();
+  let title = 'Probability Counter';
   let counter;
 
   function toast(message) {
@@ -19,23 +21,24 @@
 
   function handleImpression() {
     counter.startCounting();
-    toast(`<h3>impression</h3> from <b>${title}</b>`);
+    toast(`<h3>impression</h3> sent from <b>${title}</b>`);
   }
 
   function handleImpressioff() {
-    toast(`<h3>impressioff</h3> from <b>${title}</b>`);
+    dispatch('showDrawer');
+    toast(`<h3>impressioff</h3> sent from <b>${title}</b>`);
   }
 </script>
 
 <Card on:impression={handleImpression}
       on:impressioff={handleImpressioff}
-      class='immediately-appear--impression'
+      class='last--impression'
       title={title}
       subtitle='(start on impression)'
-      description='worth of sales per minute'>
+      description="probability that you're a bearded guy">
   <Counter bind:this={counter}
-           pre='$'
-           number={10}
-           target={412}
-           duration={5000} />
+           post='%'
+           number={4}
+           target={64}
+           duration={2000} />
 </Card>

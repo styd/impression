@@ -18,7 +18,7 @@
 <style>
   .card {
     position: relative;
-    margin: 15vh auto 40vh auto;
+    margin: 10vh auto 40vh auto;
     padding: 10px 20px;
     min-width: 100px;
     background-color: rgba(255,255,255,0.2);

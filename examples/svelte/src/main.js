@@ -1,8 +1,7 @@
-import Demo from './Demo.svelte';
+import Index from './Index.svelte';
 
-const demo = new Demo({
+const demo = new Index({
   target: document.body,
-  intro: true,
 });
 
 export default demo;
