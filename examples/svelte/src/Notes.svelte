@@ -10,6 +10,10 @@
     Toast messages or popups at the bottom is not part of the features
     of this library.
   </li>
+  <li>
+    Beautiful background image by
+    <a href='https://unsplash.com/@johnwestrock'>Dave Hoefler</a>.
+  </li>
 </ol>
 
 <style>
@@ -21,6 +25,12 @@
 
   ol {
     padding-inline-start: 14px;
+  }
+
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline 3px solid lemonchiffon;
   }
 
   @media screen and (min-width: 768px) {

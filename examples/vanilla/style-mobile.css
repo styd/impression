@@ -129,6 +129,12 @@ p.notes, .drawer-content ol li {
   padding-inline-start: 14px;
 }
 
+.drawer-content a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline 3px solid lemonchiffon;
+}
+
 .section {
   margin: 5% 0;
 }
@@ -143,12 +149,6 @@ p.notes, .drawer-content ol li {
   font-family: Roboto, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
-}
-
-.section a {
-  color: white;
-  font-weight: bold;
-  text-decoration: underline 3px solid lemonchiffon;
 }
 
 #toast-container {

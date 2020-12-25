@@ -30,11 +30,10 @@
 </Demo>
 
 <BottomDrawer show={show}>
-  <Notes />
-
   <What />
   <When />
   <Where />
+  <Notes />
 
   <br /><br /><br />
 
