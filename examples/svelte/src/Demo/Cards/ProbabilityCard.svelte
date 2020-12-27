@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { store, nextStoreId } from '../store.js';
+  import { store, nextStoreId } from '../../store.js';
   import Card from '../Card.svelte';
   import Counter from '../Counter.svelte';
 

@@ -1,5 +1,18 @@
+<script>
+  import Project from './Project.svelte';
+  import ScrollDown from './Demo/ScrollDown.svelte';
+  import SalesCard from './Demo/Cards/SalesCard.svelte';
+  import EventsCard from './Demo/Cards/EventsCard.svelte';
+  import ProbabilityCard from './Demo/Cards/ProbabilityCard.svelte';
+</script>
+
 <div class='demo'>
-  <slot />
+  <Project />
+  <ScrollDown />
+
+  <SalesCard />
+  <EventsCard />
+  <ProbabilityCard on:showDrawer />
 </div>
 
 <style>

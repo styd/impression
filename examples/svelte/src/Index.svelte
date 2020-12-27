@@ -1,16 +1,7 @@
 <script>
   import { store, nextStoreId } from './store.js';
   import Demo from './Demo.svelte';
-  import Project from './Project.svelte';
-  import ScrollDown from './ScrollDown.svelte';
-  import SalesCard from './Cards/SalesCard.svelte';
-  import EventsCard from './Cards/EventsCard.svelte';
-  import ProbabilityCard from './Cards/ProbabilityCard.svelte';
   import BottomDrawer from './BottomDrawer.svelte';
-  import Notes from './Notes.svelte';
-  import What from './What.svelte';
-  import When from './When.svelte';
-  import Where from './Where.svelte';
   import ForkMe from './ForkMe.svelte';
   import ToastContainer from './ToastContainer.svelte';
   import ToastItem from './ToastItem.svelte';
@@ -20,28 +11,9 @@
   nextStoreId.set(0);
 </script>
 
-<Demo>
-  <Project />
-  <ScrollDown />
-
-  <SalesCard />
-  <EventsCard />
-  <ProbabilityCard on:showDrawer={()=> show=true} />
-</Demo>
-
-<BottomDrawer show={show}>
-  <What />
-  <When />
-  <Where />
-  <Notes />
-
-  <br /><br /><br />
-
-  <Project />
-</BottomDrawer>
-
+<Demo on:showDrawer={()=> show=true} />
+<BottomDrawer {show} />
 <ForkMe />
-
 <ToastContainer>
   {#each $store as toast}
     <ToastItem {toast} />

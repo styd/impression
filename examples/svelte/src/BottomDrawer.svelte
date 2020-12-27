@@ -1,12 +1,24 @@
 <script>
   import { slide } from 'svelte/transition';
+  import Notes from './BottomDrawer/Notes.svelte';
+  import What from './BottomDrawer/What.svelte';
+  import When from './BottomDrawer/When.svelte';
+  import Where from './BottomDrawer/Where.svelte';
+  import Project from './Project.svelte';
 
   export let show = false;
 </script>
 
 <div class='bottom-drawer' in:slide class:show>
   <div class='drawer-content'>
-    <slot />
+    <What />
+    <When />
+    <Where />
+    <Notes />
+
+    <br><br><br>
+
+    <Project />
   </div>
 </div>
 
