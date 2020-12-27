@@ -11,7 +11,8 @@
     "build": "webpack",
     "test": "jest",
     "demo": "cd examples/vanilla/ && http-server -c-1 -a localhost -p 2345 -o / && cd -",
-    "demo:svelte": "cd examples/svelte/ && yarn install && yarn concurrently 'yarn dev' 'yarn start' 'yarn opener http://localhost:3456' && cd -"
+    "demo:svelte": "cd examples/svelte/ && yarn install && yarn concurrently 'yarn dev' 'yarn start' 'yarn opener http://localhost:3456' && cd -",
+    "demo:vue": "cd examples/vue/ && yarn install && yarn concurrently 'yarn serve --port 4567' 'sleep 2 && yarn opener http://localhost:4567' && cd -"
   },
   "repository": {
     "type": "git",
